@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff; /* Azul claro */
+    color: #1f4e78; /* Azul escuro para texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  }
+  
+  header {
+    background: #3670be; /* Azul médio */
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .logo {
+    height: 65px;
+  }
+  
+  .nav-container {
+    margin-top: 10px;
+  }
+  
+  .nav-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-container a:hover {
+    color: #58b7e7; /* Azul claro ao passar o mouse */
+  }
+  
+  main {
+    background: rgba(255, 255, 255, 0.95); /* Fundo branco com transparência */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 160px auto auto; /* Margem superior maior, sem definir margem inferior fixa */
+    text-align: center;
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+  }
+  
+  h1, h2, p {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    background: #3670be;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Garante espaço entre o formulário e o rodapé */
+  }
+  
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background-image: url('fundo1.jpg.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  
+  body::before {
+    left: 0;
+  }
+  
+  body::after {
+    right: 0;
+  }
+  
+  /* Ajuste para telas menores */
+  @media (max-width: 768px) {
+    body::before, body::after {
+      display: none; /* Remove imagens laterais em telas menores */
+    }
+  
+    main {
+      margin: 140px auto auto;
+      width: 95%;
+    }
+  }
+  
+  

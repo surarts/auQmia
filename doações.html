@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campanhas de Doações - auQmia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1></h1>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo da auQmia" class="logo">
+    </div>
+    <div class="nav-container">
+      <a href="index.html">Início</a>
+      <a href="agendamento.html">Agendar Consulta</a>
+      <a href="doações.html">Doações</a>
+      <a href="materiais.html">Materiais Educativos</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Ajude a salvar vidas!</h2>
+      <p>Participe de nossas campanhas e contribua para o bem-estar animal. Doe agora e faça a diferença.</p>
+
+      <form id="donationForm">
+        <label for="campaign">Selecione uma campanha:</label>
+        <select id="campaign" name="campaign" required>
+          <option value="castracao">Campanha de Castração</option>
+          <option value="vacinas">Vacinação em Massa</option>
+          <option value="alimentacao">Alimentação para Animais de Rua</option>
+        </select>
+      
+        <label for="name">Nome Completo:</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+      
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+      
+        <label for="amount">Valor da Doação (R$):</label>
+        <input type="number" id="amount" name="amount" min="1" placeholder="Mínimo de R$1" required>
+      
+        <button type="button" onclick="generatePixQRCode()">Gerar QR Code para Pix</button>
+        <div id="qrcode" style="margin-top: 20px;"></div>
+       </form>
+      
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <script src="qrcode.js"></script>
+</body>
+</html>

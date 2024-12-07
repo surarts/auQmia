@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Consulta - auQmia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo da auQmia" class="logo">
+      <h1></h1>
+    </div>
+    <div class="nav-container">
+      <a href="index.html">Início</a>
+      <a href="agendamento.html">Agendar Consulta</a>
+      <a href="doações.html">Doações</a>
+      <a href="materiais.html">Materiais Educativos</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Preencha os detalhes para agendar uma consulta</h2>
+      <form id="scheduleForm">
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Horário:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="name">Nome do Tutor:</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+        <label for="phone">Número de Telefone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(xx) xxxxx-xxxx" pattern="\(\d{2}\) \d{5}-\d{4}" required>
+
+        <label for="pet">Nome do Animal:</label>
+        <input type="text" id="pet" name="pet" placeholder="Nome do animal" required>
+
+        <button type="submit">Agendar Consulta</button>
+      </form>
+
+      <div id="message"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <script src="agendamento.js"></script>
+</body>
+</html>
